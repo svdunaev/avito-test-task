@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+This project is hosted using Firebase (https://avito-test-task-7eedc.web.app/) 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
