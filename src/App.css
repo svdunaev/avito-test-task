@@ -1,38 +1,60 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-family: "RobotoCondensed";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imgs-container {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  width: 100%;
+  max-width: 768px;
+  margin: 0;
+  padding: 0;
+}
+
+.imgs-container img {
+  width: 229px;
+}
+
+.imgs-container img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 730px) {
+  .imgs-container {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 500px) {
+  .imgs-container {
+    grid-template-columns: 1fr;
+    display: grid;
   }
+  .imgs-container img {
+    width: 280px;
+  }
+}
+
+@font-face {
+  font-family: "RobotoCondensed";  
+  src: url("../public/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
 }

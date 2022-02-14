@@ -1,0 +1,170 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h2 {
+	font-family: 'RobotoCondensed';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 15px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+	font-size: 13px;
+	line-height: 15px;
+	font-family: RobotoCondensed;
+	font-style: normal;
+	font-weight: normal;
+}
+
+ul li {
+	margin-bottom: 1em;
+}
+
+dt {
+	color: #999999;
+}
+
+dd {
+	color: #000000;
+	margin-inline-start: 0;
+}
+
+.modal {
+	background-color: white;
+	width: 619px;
+	height: 425px;
+	z-index: 1000;
+	padding: 30px;
+}
+
+.modal-content-wrapper {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	grid-column-gap: 14px;
+	grid-template-areas: 
+	"img comments"
+	"form comments"
+	;
+	position: relative;
+	height: 100%;
+}
+
+.modal-content-wrapper img {
+	grid-area: img;
+}
+
+.comments-container {
+	grid-area: comments;
+	overflow: auto;
+}
+
+.closebutton {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	transform: translateY(-90%);
+	margin-left: 100%;
+	opacity: 0.8;
+}
+
+.closebutton:hover {
+	opacity: 1;
+}
+
+.closebutton:before, .closebutton:after {
+	position: absolute;
+	content: ' ';
+	height: 22px;
+	width: 1.5px;
+	background-color: #333;
+}
+
+.closebutton:before {
+	transform: rotate(45deg);
+}
+
+.closebutton:after {
+	transform: rotate(-45deg);
+}
+
+.modal-content-wrapper img {
+	width: 100%;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	grid-area: form;
+}
+
+.comment-form input {
+	border: 1px solid #CCCCCC;
+	box-sizing: border-box;
+	border-radius: 3px;
+	height: 30px;
+
+	font-family: RobotoCondensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+.comment-form button {
+	height: 30px;
+	background: #4997D0;
+	border: none;
+	border-radius: 3px;
+	color: #ffffff;
+
+	font-family: RobotoCondensed;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .modal {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	.modal-content-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.comments-container {
+		margin-top: 25px;
+	}
+	.comment-form {
+		margin: auto 1em 2em;
+	}
+	.closebutton {
+		transform: translateY(0%);
+    transform: translateX(-50%);
+	}
+}
+
+@font-face {
+  font-family: "RobotoCondensed";  
+  src: url("../../../public/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal;
+}
